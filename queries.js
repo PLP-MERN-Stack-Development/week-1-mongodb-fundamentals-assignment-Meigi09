@@ -1,3 +1,8 @@
+use bookstore;
+
+// You can confirm the current database:
+db.getName();
+
 // Insert a single document
 db.books.insertOne({
     "title": "The Catcher in the Rye",
@@ -218,9 +223,9 @@ db.books.find({ $text: { $search: "classic timeless" } });
 // List all indexes on the 'books' collection
 db.books.getIndexes();
 
-// Drop a specific index (replace 'index_name' with the actual name from getIndexes())
-// db.books.dropIndex("publicationYear_1");
+// Drop a specific index 
+ db.books.dropIndex("publicationYear_1");
 
-// Drop all indexes on the 'books' collection (be careful with this in production!)
-// db.books.dropIndexes();
+// Drop all indexes on the 'books' collection 
+ db.books.dropIndexes();
 
